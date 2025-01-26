@@ -2,6 +2,7 @@
 to create a basic Python application, such as a simple calculator or a grade management
 system."""
 
+from prettytable import prettytable 
 
 print (" choose if you want to use calculate or use grade management system ")
 
@@ -26,99 +27,78 @@ if user == 1:
     val = input("Enter the operation you need (): ")
     print("Your Value is :", val)
     
-    class calculator:
+class calculator:
+    result = ""
+    def operator(self, operator, result):
+        self.operator = operator
+        self.result = result
 
-        operation = ""
-    operation = val
+    value = ("Enter how many Number You Want to Input")   
+    print(value)
+
+    
+
+    #if value
         
-arg = " "
-
-def add(arg):
-    pass
 
 if user == 2:
     print("You chose the Grade Management System")
     
 print('''
-                
+
         How Many subject and Student you want to add 
                 
     ''')
 
-print("""Which field you want to edit 
-
-    student  ......
-
-
-    subject ......
-
-
-    """)
-
-
-choice = input("Enter Your choice for edit field")
-    
     #class grade:
 class grade:
-    
     
     #  def __init__(self, student_count,):   
             def __init__(self, subject, Student):
                 self.subject = subject
-                self.Student = Student         
-                
-                
+                self.Student = Student     
 
+print("Edit Your Student Field........")
 
-
-if choice == "student":
-    print("Edit Your Student Field........")
-
-    # class student
-    class student:   
-        
-        def __init__(self, student_count, name, roll_no):
-            self.student_count = student_count
-            self.name = name
-            self.roll_no = roll_no
-
-            print("Student Info is Like .......")
-            
+total = []
+students = []
+subjects = []
+roll_list = []
+name_list= []
+subject_count = int(input("Enter the number of Subject: "))
 student_count = int(input("Enter the number of students: "))
-name = ""
-for i in range(student_count):    
-            name = input("Enter Your Full name ")
-            print("Name Is : ", name)
-roll_no = int(input("Enter Your Roll number "))
-for j in range(roll_no):
-            print("Your Roll No is : ", roll_no)
-            print(j)
-student_instance = student(student_count, name, roll_no)
-print(f"Name: {student_instance.name}, Roll_no: {student_instance.roll_no}")
+for j in range(subject_count):
+        Subject_name = input("Enter Your Subject name : ")
+        print(Subject_name)
+        subjects.append(Subject_name)
+        print(subjects)
+for i in range(student_count):
+        name = input("Enter Your name: ")
+        name_list.append(name)
+        print(name_list)
+        roll_no = int(input("Enter Your Roll number: "))
+        roll_list.append(roll_no)
+        print(roll_list)
+for k in range(subject_count): 
+        marks = int(input("Enter Your Marks: "))
+        print(marks)
+        avg = marks / subject_count
+        print(avg)
+        total.append(marks)
+        print(total)
 
-
-    # class subject        
-class subject:
-    
-    while choice == "subject":
-        pass
-    
-    print("Edit Your Subject Field........")
-
+        subject_info= {f" My name Is : {name_list} My roll_no is : {roll_list} My Subject  Is : {subjects} And {subjects}  Marks is : {total}"}
+        print(subject_info)
+print("Student Info is Like .......")
+for student in students:
+    print(student)
         
-    def __init__(self, subject, marks):
-            self.subject = subject
-            self.marks = marks
-            print("Subject Info is Like .......")
-            print(f"Subject: {self.subject}")
-            print(f"Roll_no{self.marks}")
+def print_lists(student):
+    for lst in student:
+        print(lst)
 
-subject_count = int(input("Enter the number of subjects you want to add: "))
-print("Your Value is:", subject_count)
+print("Student Info is Like .......")
+for subject in subjects:
+    print(subject)
     
-print("Subject Info is Like .......")
-
-
-list_sub = []
-list_sub.append(subject_count)
-print(subject_count)
+    

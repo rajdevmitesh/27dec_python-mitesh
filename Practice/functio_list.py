@@ -26,7 +26,7 @@ def list_library(my_list):
     list = my_list
     print(len(list))
     print(list)
-    return list
+    #return list
 
     
 list_library(total_list)

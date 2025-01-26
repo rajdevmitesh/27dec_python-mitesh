@@ -1,3 +1,4 @@
+
 # This Python code snippet is creating a simple calculator program that allows the user to perform
 # basic arithmetic operations on two numbers.
 a = int(input("Enter number 1 :"))
