@@ -37,7 +37,6 @@ class calculator:
     print(value)
 
     
-
     #if value
         
 
@@ -54,12 +53,13 @@ print('''
 class grade:
     
     #  def __init__(self, student_count,):   
-            def __init__(self, subject, Student):
+           """ def __init__(self, subject, Student):
                 self.subject = subject
-                self.Student = Student     
+                self.Student = Student """    
 
 print("Edit Your Student Field........")
 
+#stud_info = {}
 total = []
 students = []
 subjects = []
@@ -86,19 +86,23 @@ for k in range(subject_count):
         print(avg)
         total.append(marks)
         print(total)
-
-        subject_info= {f" My name Is : {name_list} My roll_no is : {roll_list} My Subject  Is : {subjects} And {subjects}  Marks is : {total}"}
-        print(subject_info)
-print("Student Info is Like .......")
+        print("Student Info is Like .......")
+for j in range (subject_count):
+   """ stud_info [name] = name_list
+    stud_info [roll_no] = roll_list
+    stud_info [Subject_name] = subjects"""
+subject_info = {f" My name Is : {name_list} My roll_no is : {roll_list} My Subject  Is : {subjects} And {subjects}  Marks is : {total}"}
+print(subject_info)   
+    
 for student in students:
     print(student)
         
-def print_lists(student):
-    for lst in student:
+def print_lists(subject_info):
+    for lst in subject_info:
         print(lst)
 
-print("Student Info is Like .......")
-for subject in subjects:
-    print(subject)
+
+"""for subject in subjects:
+    print(subject)"""
     
     

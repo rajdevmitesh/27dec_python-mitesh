@@ -1,1 +1,2 @@
-user [key] = val )
+print("Id is :",id)
+    print("My Name is:",name) 
